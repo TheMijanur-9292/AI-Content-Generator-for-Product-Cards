@@ -1,0 +1,116 @@
+/* Modern UI Setup */
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.main-wrapper {
+  padding: 3% 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4%;
+}
+
+.main-title {
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(2rem, 5vw, 3rem) !important;
+  letter-spacing: -1px;
+}
+
+/* Layout Container */
+.layout-container {
+  display: flex;
+  width: 90%; /* Percentage based width */
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3%;
+  justify-content: center;
+}
+
+.column {
+  flex: 1;
+  min-width: 0; /* Prevents flex items from overflowing */
+}
+
+/* Glassmorphism Cards */
+.card-box {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 24px !important;
+  padding: 8% !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Action Button */
+.action-btn {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  color: white !important;
+  height: 56px;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  font-size: 1.1rem !important;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Output Styling */
+.res-title {
+  font-weight: 800 !important;
+  color: #1e293b;
+  margin-bottom: 12px !important;
+}
+
+.res-desc {
+  color: #475569;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.price-box {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 5% 6%;
+  margin: 6% 0;
+  border-left: 5px solid #2563eb;
+}
+
+.res-list {
+  padding-left: 20px;
+  color: #64748b;
+}
+
+.res-list li {
+  margin-bottom: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .layout-container {
+    flex-direction: column;
+    width: 92%;
+    gap: 20px;
+  }
+  
+  .column {
+    width: 100%;
+  }
+
+  .card-box {
+    padding: 10% !important;
+  }
+}
